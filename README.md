@@ -26,6 +26,8 @@ streamlit run app.py
 
 ## Онлайн (Streamlit Community Cloud)
 
+[Задеплоить в один клик](https://share.streamlit.io/deploy?repository=iesssq/amit&branch=claude/relaxed-cori-rnfs8d&mainModule=app.py) — поля репозитория, ветки и `app.py` уже заполнены.
+
 1. Зайти на share.streamlit.io и войти через GitHub.
 2. New app → этот репозиторий, ветка `main`, файл `app.py`.
 3. По желанию в Advanced settings → Secrets добавить `OPENROUTER_API_KEY = "..."`.
