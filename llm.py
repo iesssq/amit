@@ -52,7 +52,7 @@ PROVIDERS = {
         "env": "TOGETHER_API_KEY",
         "keys_url": "https://api.together.ai/settings/api-keys",
     },
-    "Свой API": {
+    "Custom API": {
         "base_url": "",
         "models": [],
         "env": "CUSTOM_API_KEY",
