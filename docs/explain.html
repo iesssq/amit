@@ -1,0 +1,61 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><style>
+@page{size:A4;margin:16mm 16mm}
+body{font-family:'DejaVu Sans',Arial,sans-serif;color:#1d2230;font-size:12.5px;line-height:1.5}
+h1{font-size:26px;margin:0 0 4px;color:#4f6bed}
+.sub{color:#6b7390;margin:0 0 14px}
+h2{font-size:16px;margin:16px 0 6px;color:#131a33;border-left:4px solid #4f6bed;padding-left:8px}
+.box{background:#f3f5fb;border-radius:10px;padding:10px 14px;margin:6px 0}
+.steps{display:flex;gap:8px}.steps div{flex:1;background:#f3f5fb;border-radius:10px;padding:8px 10px}
+.steps b{display:block;color:#4f6bed;font-size:18px}
+table{border-collapse:collapse;width:100%}td{border-top:1px solid #dde1f0;padding:5px 6px;vertical-align:top}td:first-child{font-weight:bold;width:30%;color:#3f58d6}
+.say{background:#131a33;color:#e8ecff;border-radius:10px;padding:12px 16px}
+</style></head><body>
+<h1>StudyAi: как это работает</h1>
+<p class="sub">Быстрая шпаргалка. Два сайта (StudyAi и StudyChat) работают одинаково, отличается только дизайн.</p>
+
+<h2>Что это одной фразой</h2>
+<div class="box">Сайт-чат, где искусственный интеллект объясняет учёбу так, как удобно именно тебе. Сначала он задаёт 12 вопросов о тебе, потом отвечает с учётом твоих ответов.</div>
+
+<h2>Как пользоваться: 4 шага</h2>
+<div class="steps">
+<div><b>1</b>Выбрать модель и вставить ключ</div>
+<div><b>2</b>Ответить на 12 вопросов (кнопками или текстом)</div>
+<div><b>3</b>Написать тему и выбрать режим</div>
+<div><b>4</b>Получить ответ, он приходит по кусочкам</div>
+</div>
+
+<h2>Как устроено: представь ресторан</h2>
+<table>
+<tr><td>Наш сайт</td><td>Официант. Принимает заказ и приносит ответ. Сам не готовит.</td></tr>
+<tr><td>ИИ-модель</td><td>Повар на другой кухне (OpenRouter, OpenAI и т. д.). Мы её не создавали, мы подключили готовую.</td></tr>
+<tr><td>Ключ</td><td>Пропуск: по нему сервис понимает, что запрос настоящий. Ключ никому не показывать.</td></tr>
+<tr><td>12 вопросов</td><td>Записка для повара про гостя: кто он, что сложно, как ему проще понимать. Поэтому ответы разным людям отличаются.</td></tr>
+</table>
+
+<h2>Что происходит, когда нажимаешь «отправить»</h2>
+<div class="box">Сайт берёт твою тему, добавляет твои ответы на вопросы и выбранный режим, прикладывает последние 20 сообщений переписки и отправляет всё модели по интернету. Модель присылает ответ частями, сайт сразу показывает их на экране.</div>
+
+<h2>Режимы и кнопки</h2>
+<div class="box">Объяснить · Простыми словами · С примером · Конспект · Проверь меня · План. Под ответом есть кнопки: «Объясни проще», «Ещё пример», «Глубже», «Проверь меня».</div>
+
+<h2>Из чего сделано</h2>
+<table>
+<tr><td>Python</td><td>Язык, на котором написана программа</td></tr>
+<tr><td>Streamlit</td><td>Превращает Python-код в сайт</td></tr>
+<tr><td>requests</td><td>Отправляет запросы модели</td></tr>
+<tr><td>API</td><td>«Окошко», через которое одна программа просит другую о помощи</td></tr>
+<tr><td>GitHub</td><td>Хранилище кода: github.com/iesssq/amit и github.com/iesssq/aza</td></tr>
+<tr><td>Streamlit Cloud</td><td>Бесплатно выкладывает сайт в интернет, чтобы открыть по ссылке</td></tr>
+</table>
+
+<h2>Файлы проекта</h2>
+<table>
+<tr><td>app.py</td><td>Весь сайт: экраны, кнопки, режимы, RU/EN, история</td></tr>
+<tr><td>llm.py</td><td>Связь с моделью и понятные ошибки (неверный ключ, лимит)</td></tr>
+<tr><td>requirements.txt</td><td>Какие библиотеки нужны для запуска</td></tr>
+</table>
+
+<h2>Рассказ на одну минуту</h2>
+<div class="say">«Мы сделали сайт-помощника для студентов. Заходишь, вставляешь ключ от ИИ и отвечаешь на 12 вопросов: где учишься, что сложно, как тебе проще понимать. Потом пишешь тему и выбираешь режим: объяснить, простыми словами, с примером, конспект или проверка. Сайт отправляет модели твою тему вместе с твоим профилем, а ответ приходит по кусочкам прямо в чат. Сделано на Python и Streamlit, работает с OpenRouter, OpenAI и другими, выложено бесплатно на Streamlit Cloud.»</div>
+<p style="color:#6b7390;font-size:11px;margin-top:10px">ИИ может ошибаться: важное лучше проверять по учебнику.</p>
+</body></html>
